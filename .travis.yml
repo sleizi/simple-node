@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t simple-node-2 .
-  - docker tag simple-node sleizi/simple-node-2:latest
+  - docker tag simple-node-2 sleizi/simple-node-2:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
