@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node .
+  - docker build -t travis_ci .
   - docker tag simple-node sleizi/travis_ci:latest
 
 after_success:
